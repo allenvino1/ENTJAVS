@@ -10,6 +10,7 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="/templates/header.xhtml">
     <ui:include src="/templates/footer.xhtml"></ui:include>
+
 </ui:composition>
 
 <h:head>
@@ -22,8 +23,8 @@
     <!-- Portfolio Item Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Portfolio Item
-                <small>Item Subheading</small>
+            <h1 class="page-header">The Mapya Bundle
+                <small>Bundle</small>
             </h1>
         </div>
     </div>
@@ -46,44 +47,22 @@
                 <li>Consectetur</li>
                 <li>Adipiscing Elit</li>
             </ul>
-        </div>
+            <br>
 
+            </br>
+            <div class="col=md-4">
+            <b:button look="success" value="Order"/>
+            </div>
+        </div>
     </div>
     <!-- /.row -->
 </div>
     <!-- Related Projects Row -->
-    <div class="row">
-
-        <div class="col-lg-12">
-            <h3 class="page-header">Related Projects</h3>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt=""/>
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt=""/>
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt=""/>
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt=""/>
-            </a>
-        </div>
-
-    </div>
-
+    <ui:insert name="header" >
+        <ui:include src="/templates/supplies.xhtml" />
+    </ui:insert>
+    <br>
+    </br>
 </h:body>
 
 </html>

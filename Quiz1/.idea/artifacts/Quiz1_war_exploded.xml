@@ -8,8 +8,8 @@
           <element id="module-output" name="Quiz1" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="Mojarra-2.2.1" />
           <element id="library" level="project" name="net.bootsfaces:bootsfaces:0.9.1" />
+          <element id="library" level="application" name="Mojarra-2.2.1" />
         </element>
       </element>
     </root>
