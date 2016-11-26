@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:body>
+    <ui:composition template="templates/common.xhtml">
+        <ui:define name="content">
+            <br/><br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <b:carousel id="parque" style="height:240px" >
+                            <b:carouselItem>
+                                <img src="" alt="Valladolid" />
+                            </b:carouselItem>
+                            <b:carouselItem>
+                                <img src="" alt="Valladolid" />
+                            </b:carouselItem>
+                            <b:carouselItem>
+                                <img src="" alt="Valladolid" />
+                            </b:carouselItem>
+                        </b:carousel>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+
+                <!-- Marketing Icons Section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="page-header">
+                            Welcome to Lavatory!
+                        </h2>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h5>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h5>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5><i class="fa fa-fw fa-compass"></i> Easy to Use</h5>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <h:link value="Page 1" outcome="page1" />
+            <h:link value="Page 2" outcome="page2" />
+            <br/><br/>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
