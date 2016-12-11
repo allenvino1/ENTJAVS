@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/header.xhtml">
+    <ui:include src="/templates/footer.xhtml"></ui:include>
+
+</ui:composition>
+
+<h:head>
+    <title>Home Page</title>
+
+</h:head>
+<h:body>
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">TUCKER BUNDLE
+                <small>Bundle</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-6">
+            <img class="img-responsive" src="resources/photos/soap3.jpg" alt=""/>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Project Description</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+            <h3>Project Details</h3>
+            <ul>
+                <li>Lorem Ipsum</li>
+                <li>Dolor Sit Amet</li>
+                <li>Consectetur</li>
+                <li>Adipiscing Elit</li>
+            </ul>
+            <br>
+
+            </br>
+            <div class="col=md-4">
+            <b:button look="success" value="Order"/>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+    <!-- Related Projects Row -->
+    <ui:insert name="header" >
+        <ui:include src="/templates/supplies.xhtml" />
+    </ui:insert>
+    <br>
+    </br>
+</h:body>
+
+</html>
+

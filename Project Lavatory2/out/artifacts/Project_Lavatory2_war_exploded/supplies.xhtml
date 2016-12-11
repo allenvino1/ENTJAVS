@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/header.xhtml">
+    <ui:include src="/templates/footer.xhtml"></ui:include>
+
+</ui:composition>
+
+<h:head>
+    <title>Home Page</title>
+
+</h:head>
+<h:body>
+<!-- <div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">The Mapya Bundle
+                <small>Bundle</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <img class="img-responsive" src="resources/photos/toothbrush.jpg" alt=""/>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Project Description</h3>
+            <p>Daily toothbrushing is the best at-home method for maintaining good dental health.
+                Oral-B and Colgates offers a complete line of specially designed toothbrushes aimed at making it easy and effective
+                to care of our own teeth as part of our daily routines.</p>
+            <h3>Project Details</h3>
+            <ul>
+                <li>Lorem Ipsum</li>
+                <li>Dolor Sit Amet</li>
+                <li>Consectetur</li>
+                <li>Adipiscing Elit</li>
+            </ul>
+            <br>
+
+            </br>
+            <div class="col=md-4">
+            <b:button look="success" value="Order"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <ui:insert name="header" >
+        <ui:include src="/templates/supplies.xhtml" />
+    </ui:insert>
+    <br>
+    </br>
+ -->
+    <div class="container">
+      <div class="row">
+
+        <ui:include src="/templates/listcategories.xhtml"></ui:include>
+
+          <div class="col-md-9">
+
+              <b:carousel id="parque2" style="width:800px height:200px" disabled="true">
+                  <b:carouselItem>
+                      <img src="http://placehold.it/800x300" alt="Valladolid" />
+                  </b:carouselItem>
+                  <b:carouselItem>
+                      <img src="http://placehold.it/800x300" alt="Valladolid" />
+                  </b:carouselItem>
+                  <b:carouselItem>
+                      <img src="http://placehold.it/800x300" alt="Valladolid" />
+                  </b:carouselItem>
+              </b:carousel>
+
+              </div>
+
+
+
+          </div>
+
+      </div>
+
+
+
+
+
+    <!-- /.container -->
+
+
+</h:body>
+
+</html>
+
