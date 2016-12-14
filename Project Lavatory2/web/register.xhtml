@@ -12,7 +12,7 @@
 </ui:composition>
 
 <h:head>
-    <title>Twit Sign up</title>
+    <title>Lavatory Sign up</title>
 </h:head>
 
 <h:body>
@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Username</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Username" value="">
+                        <b:inputText span="6" class="form-control" placeholder="Username" value="#{userBean.user.username}">
                             <f:facet name="prepend">
                                 <b:icon name="user"/>
                             </f:facet>
@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">First Name</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="First Name" value="">
+                        <b:inputText span="6" class="form-control" placeholder="First Name" value="#{userBean.user.firstname}">
                             <f:facet name="prepend">
                                 <b:icon name="user"/>
                             </f:facet>
@@ -47,7 +47,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Last Name</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Last Name" value="">
+                        <b:inputText span="6" class="form-control" placeholder="Last Name" value="#{userBean.user.lastname}">
                             <f:facet name="prepend">
                                 <b:icon name="user"/>
                             </f:facet>
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                        <b:inputSecret span="6" class="form-control" placeholder="Password" value="">
+                        <b:inputSecret span="6" class="form-control" placeholder="Password" value="#{userBean.user.password}">
                             <f:facet name="prepend">
                                 <b:icon name="lock"/>
                             </f:facet>
@@ -67,7 +67,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Confirm Password</label>
                     <div class="col-lg-10">
-                        <b:inputSecret span="6" class="form-control" placeholder="Retype Password" value="">
+                        <b:inputSecret span="6" class="form-control" placeholder="Retype Password" value="#{userBean.password}">
                             <f:facet name="prepend">
                                 <b:icon name="lock"/>
                             </f:facet>
@@ -77,7 +77,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <b:inputText type="email" span="6" class="form-control" placeholder="Email" value="">
+                        <b:inputText type="email" span="6" class="form-control" placeholder="Email" value="#{userBean.user.email}">
                             <f:facet name="prepend">
                                 <b:icon name="envelope"/>
                             </f:facet>
@@ -86,8 +86,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <b:commandButton class="btn btn-default" href="login.xhtml">Back</b:commandButton>
-                        <b:commandButton class="btn btn-primary">Sign up</b:commandButton>
+                        <b:commandButton class="btn btn-default">Back</b:commandButton>
+                        <b:commandButton class="btn btn-primary" action="#{userBean.register()}">Sign up</b:commandButton>
                     </div>
                 </div>
             </fieldset>

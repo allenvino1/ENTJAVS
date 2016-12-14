@@ -16,10 +16,12 @@
 
                 </br>
                 <div class="list-group">
-                    <a href="hair.jsf" class="list-group-item">Hair</a>
-                    <a href="face.jsf" class="list-group-item">Face</a>
-                    <a href="body.jsf" class="list-group-item">Body</a>
-                    <a href="accessories.jsf" class="list-group-item">Accessories</a>
+                    <h:form>
+                        <b:commandButton class="list-group-item" action="#{itemBean.getItems1()}">Hair</b:commandButton>
+                        <a href="face.jsf" class="list-group-item">Face</a>
+                        <a href="body.jsf" class="list-group-item">Body</a>
+                        <a href="accessories.jsf" class="list-group-item">Accessories</a>
+                    </h:form>
                 </div>
             </div>
 
