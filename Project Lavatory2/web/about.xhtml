@@ -16,60 +16,33 @@
 
 
 <h:head>
-    <title>Mapya Log in</title>
+  <h:outputStylesheet name="css/bootstrap.css" />
 </h:head>
 
 <h:body>
 
-    <b:navBar>
-        <b:navbarLinks pull="right">
-            <b:navLink icon="user">user</b:navLink>
+    <div class="container">
 
-        </b:navbarLinks>
-    </b:navBar>
-    <div class="col-lg-3 container-fluid"/>
-    <div class="col-lg-6">
-        <h:form class="form-horizontal">
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-lg-3 control-label">Admin</label>
-                </div>
-                <div class="form-group">
-                    <label class="col-lg-2 control-label">Username</label>
-                    <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Username" value="">
-                            <f:facet name="prepend">
-                                <b:icon name="user"/>
-                            </f:facet>
-                        </b:inputText>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                        <b:inputSecret span="6" class="form-control" placeholder="Password" value="">
-                            <f:facet name="prepend">
-                                <b:icon name="lock"/>
-                            </f:facet>
-                        </b:inputSecret>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <!-- <b:commandButton class="btn btn-default" action="">Cancel</b:commandButton> -->
-                        <h:outputLink value="success.xhtml">Login</h:outputLink>
+        <div class="row-fluid">
 
-                    </div>
+                <h2 style="align:center">
+                    Who We Are
+                </h2>
+                <img src="" class="img-responsive" title="name"/>
+                <p><strong><span>Lavatory</span></strong></p>
+                <p>These individuals are all students from Asia Pacific College who loves spending their idle time going
+                    to vacations. They all experience all the hassles and problems in planning a trip for their families
+                    or with their barkadas and that’s where gentlemen came up with the idea.</p>
 
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <!-- <b:commandButton class="btn btn-default" action="">Cancel</b:commandButton> -->
-                        <h:outputLink value="register.xhtml">Sign up here!</h:outputLink>
-                    </div>
-                </div>
-            </fieldset>
-        </h:form>
+
+        </div>
+
+
+
+
     </div>
-    <div class="col-lg-3"/>
+
+
 
 </h:body>
 </html>

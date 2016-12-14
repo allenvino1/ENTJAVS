@@ -5,18 +5,18 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/header.xhtml">
+
+</ui:composition>
 
 <h:head>
     <title>Twit Sign up</title>
 </h:head>
 
 <h:body>
-    <b:navBar>
-        <b:navbarLinks pull="right">
-            <b:navLink icon="user">user</b:navLink>
 
-        </b:navbarLinks>
-    </b:navBar>
     <div class="col-lg-3"/>
     <div class="col-lg-6">
         <h:form class="form-horizontal">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <b:commandButton class="btn btn-default" href="home.xhtml">Cancel</b:commandButton>
+                        <b:commandButton class="btn btn-default" href="login.xhtml">Back</b:commandButton>
                         <b:commandButton class="btn btn-primary">Sign up</b:commandButton>
                     </div>
                 </div>

@@ -69,9 +69,9 @@
 
         <ui:include src="/templates/listcategories.xhtml"></ui:include>
 
-          <div class="col-md-9">
-
-              <b:carousel id="parque2" style="width:800px height:200px" disabled="true">
+          <div class="col-md-8">
+            <div class="col-md-12">
+              <b:carousel id="parque2" style="width:800px height:500px" disabled="true">
                   <b:carouselItem>
                       <img src="http://placehold.it/800x300" alt="Valladolid" />
                   </b:carouselItem>
@@ -83,13 +83,18 @@
                   </b:carouselItem>
               </b:carousel>
 
-              </div>
-
-
+          </div>
+          <div class="col-md-4">
+              <h1>Lavatory In the making</h1>
 
           </div>
+              </div>
+        </div>
+    </div>
 
-      </div>
+    <ui:include src="/templates/supplies.xhtml" />
+
+
 
 
 
