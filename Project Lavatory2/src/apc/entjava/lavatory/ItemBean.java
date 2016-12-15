@@ -52,7 +52,7 @@ public class ItemBean {
         return "success";
     }
 
-    public String getAllItems()
+    public String getAllItemsForDelete()
     {
         items = this.itemLogic.getAllItems();
 
@@ -64,7 +64,27 @@ public class ItemBean {
         this.itemLogic.deleteItem(item.getItemID());
 
         items = this.itemLogic.getAllItems();
-        
+
         return "deleteItem";
+    }
+
+    public String getAllItemsForEdit()
+    {
+        items = this.itemLogic.getAllItems();
+
+        return "editItem";
+    }
+
+    public String getItemForEdit()
+    {
+        item = this.itemLogic.getItemForEdit(item.getItemID());
+
+        return "editItem2";
+    }
+
+    public String editItem()
+    {
+        this.itemLogic.editItem(item, item.getItemID());
+        return null;
     }
 }

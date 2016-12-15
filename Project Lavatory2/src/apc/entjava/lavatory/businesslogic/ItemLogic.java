@@ -10,7 +10,8 @@ import java.util.List;
 public interface ItemLogic {
     void addItem(Item item);
     void deleteItem(int itemID);
+    void editItem(int itemID);
     List<Item> getHairItem();
     List<Item> getAllItems();
-
+    Item getItemForEdit(int itemID);
 }

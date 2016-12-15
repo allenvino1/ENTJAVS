@@ -22,7 +22,8 @@
         <b:navbarLinks>
             <b:navLink value="" href="addItem.jsf">Add Item</b:navLink>
             <h:form>
-                <b:commandButton class="list-group-item" action="#{itemBean.getAllItems()}">Delete Item</b:commandButton>
+                <b:commandButton class="list-group-item" action="#{itemBean.getAllItemsForDelete()}">Delete Item</b:commandButton>
+                <b:commandButton class="list-group-item" action="#{itemBean.getAllItemsForEdit()}">Edit Item</b:commandButton>
             </h:form>
         </b:navbarLinks>
         <form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs" role="search">

@@ -18,27 +18,11 @@
 
     <b:navBar brand="Brand" brandHref="#">
         <b:navbarLinks>
-            <b:navLink value="Link" href="addItem"></b:navLink>
-            <b:navLink value="Link" href="#"></b:navLink>
-            <b:dropMenu value="Dropdown" iconAwesome="birthday-cake">
-                <b:navLink value="Action" href="#"></b:navLink>
-                <b:navLink value="Another action" href="#"></b:navLink>
-                <b:navLink value="Something else here" href="#"></b:navLink>
-                <b:navLink></b:navLink>
-                <b:navLink header="Nav header"></b:navLink>
-                <b:navLink value="Separated link" href="#"></b:navLink>
-                <b:dropMenu value="Nested submenu" iconAwesome="birthday-cake" iconAlign="right">
-                    <b:navLink value="You can nest menus" href="#"></b:navLink>
-                    <b:dropMenu value="Nested sub-submenu">
-                        <b:navLink value="... as deep as ..." href="#"></b:navLink>
-                        <b:dropMenu value="Nested sub-sub-submenu">
-                            <b:navLink value="... you want!" href="#"></b:navLink>
-                        </b:dropMenu>
-                    </b:dropMenu>
-
-                </b:dropMenu>
-                <b:navLink value="One more separated link" href="#"></b:navLink>
-            </b:dropMenu>
+            <b:navLink value="" href="addItem.jsf">Add Item</b:navLink>
+            <h:form>
+                <b:commandButton class="list-group-item" action="#{itemBean.getAllItemsForDelete()}">Delete Item</b:commandButton>
+                <b:commandButton class="list-group-item" action="#{itemBean.getAllItemsForEdit()}">Edit Item</b:commandButton>
+            </h:form>
         </b:navbarLinks>
         <form class="navbar-form navbar-left hidden-md hidden-sm hidden-xs" role="search">
             <div class="form-group">

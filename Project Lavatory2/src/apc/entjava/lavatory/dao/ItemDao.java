@@ -53,6 +53,29 @@ public class ItemDao implements ItemLogic{
     }
 
     @Override
+    public void editItem(int itemID) {
+
+        EntityManager em = emf.createEntityManager();
+        Item item;
+
+        em.getTransaction().begin();
+        try {
+            item = em.find(Item.class, itemID);
+            item.setCategory(item.getCategory());
+            item.setItemName(item.getItemName());
+            item.setCasePack(item.getCasePack());
+            item.setBuyCost(item.getBuyCost());
+            item.setUnitCost(item.getUnitCost());
+            item.setUnitCost(item.getUnitCost());
+            em.getTransaction().commit();
+        } catch(Exception e) {
+            em.getTransaction().rollback();
+        }
+        em.close();
+    }
+
+
+    @Override
     public List<Item> getAllItems() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -67,6 +90,25 @@ public class ItemDao implements ItemLogic{
         em.close();
 
         return items;
+    }
+
+    @Override
+    public Item getItemForEdit(int itemID) {
+        EntityManager em = emf.createEntityManager();
+        Item item = null;
+        em.getTransaction().begin();
+        try {
+            item = em.createQuery("select i from Item i where i.itemID = :itemID", Item.class)
+                    .setParameter("itemID", itemID)
+                    .getSingleResult();
+            em.getTransaction().commit();
+        } catch(Exception e) {
+            em.getTransaction().rollback();
+        }
+
+        em.close();
+
+        return item;
     }
 
     @Override
