@@ -9,6 +9,10 @@ import java.util.List;
  */
 public interface ItemLogic {
     void addItem(Item item);
-    List<Item> getItemHair();
+    void deleteItem(int itemID);
+    void editItem(Item item, int itemID);
+    List<Item> getHairItem();
+    List<Item> getAllItems();
+    Item getItemForEdit(int itemID);
 
 }
