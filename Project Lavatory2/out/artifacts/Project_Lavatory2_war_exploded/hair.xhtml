@@ -14,7 +14,7 @@
 </ui:composition>
 
 <h:head>
-    <title>Home Page</title>
+    <title>Hair Items</title>
 
 </h:head>
 <h:body>
@@ -23,42 +23,39 @@
         <div class="row">
 
             <ui:include src="/templates/listcategories.xhtml"></ui:include>
+            #{item.itemImage}
             <ui:repeat value="#{itemBean.items}" var="item">
 
-            <div class="col-md-9">
-                <h1 class="page-header">#{item.itemName} bundle
-                    <small>Bundle</small>
-                </h1>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="resources/photos/towel.jpg" alt=""/>
-                </div>
+                <div class="col-md-9">
+                    <h1 class="page-header">#{item.itemName} bundle
+                        <small>Bundle</small>
+                    </h1>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="#{item.itemImage}" alt=""/>
+                    </div>
 
-                <div class="col-md-6">
+                    <div class="col-md-6">
 
-                    <h3>Item description</h3>
-                    <p>#{item.description}</p>
-                    <h3>Project Details</h3>
-                    <ul>
-                        <li>Lorem Ipsum</li>
-                        <li>Dolor Sit Amet</li>
-                        <li>Consectetur</li>
-                        <li>Adipiscing Elit</li>
-                    </ul>
-                    <br>
+                        <h3>Item description</h3>
+                        <p>#{item.description}</p>
+                        <h3>Item Details</h3>
+                        <ul>
+                            <li>Case Pack: #{item.casePack}</li>
+                            <li>Cost: #{item.buyCost}</li>
+                            <li>Unit Cost: #{item.unitCost}</li>
+                        </ul>
+                        <br>
 
-                    </br>
-                    <div class="col=md-4">
-                        <b:button look="success" value="Order"/>
+                        </br>
+                        <div class="col=md-4">
+                            <b:button look="success" value="Order"/>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </ui:repeat>
         </div>
     </div>
-
-
-
     <ui:insert name="header" >
         <ui:include src="/templates/supplies.xhtml" />
     </ui:insert>

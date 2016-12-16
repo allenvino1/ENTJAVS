@@ -27,7 +27,29 @@ public class ItemDao implements ItemLogic{
     public void addItem(Item item) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        try {
+        try{
+            String path = "";
+
+            switch(item.getCategory())
+            {
+                case "hair":
+                    path = "resources/photos/shampoo.jpg";
+                    break;
+                case "face:":
+                    path = "resources/photos/bowl.jpg";
+                    break;
+                case "body":
+                    path = "resources/photos/body.jpg";
+                    break;
+                case "accessories":
+                    path = "resources/photos/tissue.jpg";
+                    break;
+                default:
+                    break;
+            }
+
+            item.setItemImage(path);
+
             em.persist(item);
             em.getTransaction().commit();
         } catch(Exception e) {
@@ -120,11 +142,12 @@ public class ItemDao implements ItemLogic{
     }
 
     @Override
-    public List<Item> getHairItem() {
+    public List<Item> getListItem(String category) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         try {
-            items = em.createQuery("select i from Item i where i.category = 'Hair'", Item.class)
+            items = em.createQuery("select i from Item i where i.category = :category", Item.class)
+                    .setParameter("category", category)
                     .getResultList();
             em.getTransaction().commit();
         } catch(Exception e) {

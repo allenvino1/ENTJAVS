@@ -1,9 +1,6 @@
 package apc.entjava.lavatory.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -16,6 +13,7 @@ public class Item {
     private BigDecimal buyCost;
     private BigDecimal unitCost;
     private String description;
+    private String itemImage;
 
     @Id
     @GeneratedValue
@@ -79,6 +77,15 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Column(nullable=false, length=254)
+    public String getItemImage() {
+        return itemImage;
+    }
+
+    public void setItemImage(String itemImage) {
+        this.itemImage = itemImage;
     }
 
     public Item(int itemID, String category, String itemName, String casePack, BigDecimal buyCost, BigDecimal unitCost, String description) {

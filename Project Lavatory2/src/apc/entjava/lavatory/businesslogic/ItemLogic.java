@@ -12,7 +12,7 @@ public interface ItemLogic {
     void addItem(Item item);
     void deleteItem(int itemID);
     Item editItem(int itemID, String category, String itemName, String casePack, BigDecimal buyCost, BigDecimal unitCost, String description);
-    List<Item> getHairItem();
+    List<Item> getListItem(String category);
     List<Item> getAllItems();
     Item getItemForEdit(int itemID);
 

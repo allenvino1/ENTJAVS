@@ -105,9 +105,30 @@ public class ItemBean {
 
     public String getHairItem()
     {
-        items = this.itemLogic.getHairItem();
+        items = this.itemLogic.getListItem("Hair");
 
         return "hair";
+    }
+
+    public String getFaceItem()
+    {
+        items = this.itemLogic.getListItem("Face");
+
+        return "face";
+    }
+
+    public String getBodyItem()
+    {
+        items = this.itemLogic.getListItem("Body");
+
+        return "body";
+    }
+
+    public String getAccItem()
+    {
+        items = this.itemLogic.getListItem("Accessories");
+
+        return "accessories";
     }
 
     public String addItem()
