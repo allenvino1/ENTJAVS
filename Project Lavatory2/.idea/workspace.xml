@@ -105,9 +105,11 @@
       <file leaf-file-name="ItemDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/apc/entjava/lavatory/dao/ItemDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -978,12 +980,12 @@
       <workItem from="1481789628303" duration="109000" />
       <workItem from="1481789803180" duration="14510000" />
       <workItem from="1481872462713" duration="2890000" />
-      <workItem from="1481883669514" duration="20613000" />
+      <workItem from="1481883669514" duration="20894000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96983000" />
+    <option name="totallyTimeSpent" value="97264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1398,9 +1400,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/lavatory/dao/ItemDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
