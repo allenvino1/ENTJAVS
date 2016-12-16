@@ -54,9 +54,20 @@
                     <label class="col-lg-3 control-label">Edit Item</label>
                 </div>
                 <div class="form-group">
+                    <label class="col-lg-2 control-label">Item ID</label>
+                    <div class="col-lg-10">
+                        Enter Item ID #{itemBean.item.itemID}
+                        <h:inputText span="6" class="form-control" placeholder="#{itemBean.item.itemID}" value="#{itemBean.itemID}">
+                            <f:facet name="prepend">
+                                <b:icon name="item"/>
+                            </f:facet>
+                        </h:inputText>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-lg-2 control-label">Category</label>
                     <div class="col-lg-10">
-                        <h:selectOneMenu value="#{itemBean.item.category}">
+                        <h:selectOneMenu value="#{itemBean.category}">
                             <f:selectItem itemValue="hair" itemLabel="Hair" />
                             <f:selectItem itemValue="face" itemLabel="Face" />
                             <f:selectItem itemValue="body" itemLabel="Body" />
@@ -70,8 +81,9 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Item Name</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Item Name" value="#{itemBean.item.itemName}">
+                        <b:inputText span="6" class="form-control" placeholder="Item Name" value="#{itemBean.itemName}">
                             <f:facet name="prepend">
+                                #{itemBean.item.itemName}
                                 <b:icon name="item"/>
                             </f:facet>
                         </b:inputText>
@@ -80,7 +92,7 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Case Pack</label>
                     <div class="col-lg-10">
-                        <h:selectOneMenu value="#{itemBean.item.casePack}">
+                        <h:selectOneMenu value="#{itemBean.casePack}">
                             <f:selectItem itemValue="10-50" itemLabel="10-50" />
                             <f:selectItem itemValue="50-100" itemLabel="50-100" />
                             <f:selectItem itemValue="100-200" itemLabel="100-200" />
@@ -93,8 +105,9 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Cost</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Cost" value="#{itemBean.item.buyCost}">
+                        <b:inputText span="6" class="form-control" placeholder="Cost" value="#{itemBean.buyCost}">
                             <f:facet name="prepend">
+                                #{itemBean.item.buyCost}
                                 <b:icon name="item"/>
                             </f:facet>
                         </b:inputText>
@@ -103,8 +116,9 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Unit Cost</label>
                     <div class="col-lg-10">
-                        <b:inputText span="6" class="form-control" placeholder="Unit Cost" value="#{itemBean.item.unitCost}">
+                        <b:inputText span="6" class="form-control" placeholder="Unit Cost" value="#{itemBean.unitCost}">
                             <f:facet name="prepend">
+                                #{itemBean.item.unitCost}
                                 <b:icon name="item"/>
                             </f:facet>
                         </b:inputText>
@@ -113,7 +127,8 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Description</label>
                     <div class="col-lg-10">
-                        <h:inputTextarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here.s" rows="7" value="#{itemBean.item.description}">
+                        <h:inputTextarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here" rows="7" value="#{itemBean.description}">
+                            #{itemBean.item.description}
                             <f:facet name="prepend">
                                 <b:icon name="item"/>
                             </f:facet>
@@ -123,7 +138,7 @@
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <b:commandButton class="btn btn-default">Back</b:commandButton>
-                        <b:commandButton class="btn btn-primary" action="#{itemBean.editItem()}">Add Item</b:commandButton>
+                        <b:commandButton class="btn btn-primary" action="#{itemBean.editItem()}">Edit Item</b:commandButton>
                     </div>
                 </div>
             </fieldset>

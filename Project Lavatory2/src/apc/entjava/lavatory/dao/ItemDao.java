@@ -10,9 +10,9 @@ import apc.entjava.lavatory.businesslogic.ItemLogic;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ItemDao implements ItemLogic{
 
@@ -39,6 +39,7 @@ public class ItemDao implements ItemLogic{
     @Override
     public void deleteItem(int itemID) {
         EntityManager em = emf.createEntityManager();
+
         Item item;
 
         em.getTransaction().begin();
@@ -53,25 +54,32 @@ public class ItemDao implements ItemLogic{
     }
 
     @Override
-    public void editItem(int itemID) {
+    public Item editItem(int itemID, String category, String itemName, String casePack, BigDecimal buyCost, BigDecimal unitCost, String description) {
 
         EntityManager em = emf.createEntityManager();
-        Item item;
+
+        Item item2 = null;
 
         em.getTransaction().begin();
         try {
-            item = em.find(Item.class, itemID);
-            item.setCategory(item.getCategory());
-            item.setItemName(item.getItemName());
-            item.setCasePack(item.getCasePack());
-            item.setBuyCost(item.getBuyCost());
-            item.setUnitCost(item.getUnitCost());
-            item.setUnitCost(item.getUnitCost());
+            item2 = em.createQuery("select i from Item i where itemID = :itemID", Item.class)
+                    .setParameter("itemID", itemID)
+                    .getSingleResult();
+
+            item2.setCategory(category);
+            item2.setItemName(itemName);
+            item2.setCasePack(casePack);
+            item2.setBuyCost(buyCost);
+            item2.setUnitCost(unitCost);
+            item2.setDescription(description);
+
+            em.merge(item2);
             em.getTransaction().commit();
         } catch(Exception e) {
-            em.getTransaction().rollback();
         }
         em.close();
+
+        return item2;
     }
 
 
