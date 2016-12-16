@@ -15,7 +15,7 @@ public class UserDao implements UserService {
 
     private EntityManagerFactory emf;
     public UserDao() {
-        emf = Persistence.createEntityManagerFactory("LavatoryDB");
+        emf = Persistence.createEntityManagerFactory("LavatoryDb");
     }
 
     @Override

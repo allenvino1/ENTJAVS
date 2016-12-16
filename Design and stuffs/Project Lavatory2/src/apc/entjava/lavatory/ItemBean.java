@@ -17,7 +17,6 @@ public class ItemBean {
 
     private ItemLogic itemLogic = new ItemDao();
     private List<Item> items = new ArrayList<>();
-
     private Item item;
 
     public List<Item> getItems() {
@@ -39,15 +38,9 @@ public class ItemBean {
         this.item = item;
     }
 
-    public String getItems1()
+    public String getHairItem()
     {
-        items = this.itemLogic.getItemHair();
-
-        for (Item item: items)
-        {
-            item.getCategory();
-            item.getItemName();
-        }
+        items = this.itemLogic.getHairItem();
 
         return "hair";
     }
@@ -57,5 +50,41 @@ public class ItemBean {
         this.itemLogic.addItem(item);
 
         return "success";
+    }
+
+    public String getAllItemsForDelete()
+    {
+        items = this.itemLogic.getAllItems();
+
+        return "deleteItem";
+    }
+
+    public String deleteItem()
+    {
+        this.itemLogic.deleteItem(item.getItemID());
+
+        items = this.itemLogic.getAllItems();
+
+        return "deleteItem";
+    }
+
+    public String getAllItemsForEdit()
+    {
+        items = this.itemLogic.getAllItems();
+
+        return "editItem";
+    }
+
+    public String getItemForEdit()
+    {
+        item = this.itemLogic.getItemForEdit(item.getItemID());
+
+        return "editItem2";
+    }
+
+    public String editItem()
+    {
+        this.itemLogic.editItem(item,item.getItemID());
+        return null;
     }
 }

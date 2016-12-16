@@ -5,7 +5,7 @@
          id="WebApp_ID" version="3.0">
     <display-name>jsfLoginExample</display-name>
     <welcome-file-list>
-        <welcome-file>/home.xhtml</welcome-file>
+        <welcome-file>/index.jsf</welcome-file>
     </welcome-file-list>
     <resource-ref>
         <description>Login Database</description>
@@ -23,7 +23,6 @@
         <url-pattern>/faces/*</url-pattern>
         <url-pattern>*.jsf</url-pattern>
         <url-pattern>*.xhtml</url-pattern>
-
     </servlet-mapping>
     <context-param>
         <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
@@ -42,27 +41,7 @@
         <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
         <param-value>resources.application</param-value>
     </context-param>
-    <context-param>
-        <param-name>JDBC-DRIVER</param-name>
-        <param-value>com.mysql.jdbc.Driver</param-value>
-    </context-param>
-    <context-param>
-        <param-name>DB-SERVER</param-name>
-        <param-value>jdbc:mysql://localhost/testing</param-value>
-    </context-param>
-    <context-param>
-        <param-name>DB-USER</param-name>
-        <param-value>root</param-value>
-    </context-param>
-    <context-param>
-        <param-name>DB-PASSWORD</param-name>
-        <param-value></param-value>
-    </context-param>
     <listener>
         <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
     </listener>
-    <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.faces</url-pattern>
-    </servlet-mapping>
 </web-app>

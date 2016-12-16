@@ -15,6 +15,7 @@ public class Item {
     private String casePack;
     private BigDecimal buyCost;
     private BigDecimal unitCost;
+    private String description;
 
     @Id
     @GeneratedValue
@@ -71,13 +72,23 @@ public class Item {
         this.unitCost = unitCost;
     }
 
-    public Item(int itemID, String category, String itemName, String casePack, BigDecimal buyCost, BigDecimal unitCost) {
+    @Column(nullable=false, length=254)
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Item(int itemID, String category, String itemName, String casePack, BigDecimal buyCost, BigDecimal unitCost, String description) {
         this.itemID = itemID;
         this.category = category;
         this.itemName = itemName;
         this.casePack = casePack;
         this.buyCost = buyCost;
         this.unitCost = unitCost;
+        this.description = description;
     }
 
     public Item() {
