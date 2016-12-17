@@ -12,6 +12,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
+          <factory-entry name="LavatoryDB" />
           <factory-entry name="LavatoryDb" />
           <factory-entry name="NewPersistenceUnit" />
         </datasource-mapping>
