@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <link rel="stylesheet" href="resources/css/custom.css"/>
+</h:head>
+<h:body>
+
+            <div class="col-md-3">
+                <a href="supplies.xhtml" class="lead">Lavatory Categories</a>
+                <br>
+
+                </br>
+                <div class="list-group">
+                    <h:form>
+                        <b:commandButton class="list-group-item" action="#{itemBean.getItems1()}">Hair</b:commandButton>
+                        <a href="face.jsf" class="list-group-item">Face</a>
+                        <a href="body.jsf" class="list-group-item">Body</a>
+                        <a href="accessories.jsf" class="list-group-item">Accessories</a>
+                    </h:form>
+                </div>
+            </div>
+
+</h:body>
+</html>
+
+
+

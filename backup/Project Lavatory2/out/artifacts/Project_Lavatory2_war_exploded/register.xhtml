@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/header.xhtml">
+
+</ui:composition>
+
+<h:head>
+    <title>Lavatory Sign up</title>
+</h:head>
+
+<h:body>
+
+    <div class="col-lg-3"/>
+    <div class="col-lg-6">
+        <h:form class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Sign Up</label>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Username</label>
+                    <div class="col-lg-10">
+                        <b:inputText span="6" class="form-control" placeholder="Username" value="#{userBean.user.username}">
+                            <f:facet name="prepend">
+                                <b:icon name="user"/>
+                            </f:facet>
+                        </b:inputText>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">First Name</label>
+                    <div class="col-lg-10">
+                        <b:inputText span="6" class="form-control" placeholder="First Name" value="#{userBean.user.firstname}">
+                            <f:facet name="prepend">
+                                <b:icon name="user"/>
+                            </f:facet>
+                        </b:inputText>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Last Name</label>
+                    <div class="col-lg-10">
+                        <b:inputText span="6" class="form-control" placeholder="Last Name" value="#{userBean.user.lastname}">
+                            <f:facet name="prepend">
+                                <b:icon name="user"/>
+                            </f:facet>
+                        </b:inputText>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <b:inputSecret span="6" class="form-control" placeholder="Password" value="#{userBean.user.password}">
+                            <f:facet name="prepend">
+                                <b:icon name="lock"/>
+                            </f:facet>
+                        </b:inputSecret>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Confirm Password</label>
+                    <div class="col-lg-10">
+                        <b:inputSecret span="6" class="form-control" placeholder="Retype Password" value="#{userBean.password}">
+                            <f:facet name="prepend">
+                                <b:icon name="lock"/>
+                            </f:facet>
+                        </b:inputSecret>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <b:inputText type="email" span="6" class="form-control" placeholder="Email" value="#{userBean.user.email}">
+                            <f:facet name="prepend">
+                                <b:icon name="envelope"/>
+                            </f:facet>
+                        </b:inputText>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <b:commandButton class="btn btn-default">Back</b:commandButton>
+                        <b:commandButton class="btn btn-primary" action="#{userBean.register()}">Sign up</b:commandButton>
+                    </div>
+                </div>
+            </fieldset>
+        </h:form>
+    </div>
+    <div class="col-lg-3"/>
+    <br/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <ui:composition template="templates/footer.xhtml"/>
+</h:body>
+</html>
